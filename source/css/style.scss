@@ -6,6 +6,62 @@ $darkGrey   : #424242;
 $black      : #000000;
 $small      : 600px;
 
+@mixin flexDisplay() {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+}
+
+@mixin flexDirection($value) {
+  -ms-flex-direction: $value;
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin alignItems($value) {
+  @if $value == flex-start{
+    -ms-flex-align: start;
+  }@else if $value == flex-end{
+    -ms-flex-align: end;
+  }@else if $value == center{
+    -ms-flex-align: center;
+  }@else if $value == stretch{
+    -ms-flex-align: stretch;
+  }
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  -ms-align-items: $value;
+  align-items: $value;
+}
+
+@mixin justifyContent($value) {
+  @if $value == flex-start{
+    -ms-flex-pack: start;
+  }@else if $value == flex-end{
+    -ms-flex-pack: end;
+  }@else if $value == center{
+    -ms-flex-pack: center;
+  }@else if $value == space-between{
+    -ms-flex-pack: justify;
+  }
+  -webkit-justify-content: $value;
+  -moz-justify-content: $value;
+  -ms-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin flex-wrap($value) {
+  -webkit-flex-wrap: $value;
+  -moz-flex-wrap: $value;
+  @if $value == nowrap{
+    -ms-flex-wrap: none;
+  }@else{
+    -ms-flex-wrap: $value;
+  }
+}
+
 * {
   outline: none;
 }
@@ -106,13 +162,13 @@ body {
   }
 
   div.box {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
+    @include flexDisplay();
+    @include flexDirection(row);
+    @include alignItems(flex-start);
+    @include justifyContent(space-around);
 
     @media screen and (max-width: $small) {
-      flex-direction: column;
+      @include flexDirection(column);
     }
 
     div {
@@ -157,15 +213,16 @@ body {
   width: 100%;
   margin: 0;
   padding: 30px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   text-align: center;
   background-color: $pink;
   color: $white;
 
+  @include flexDisplay();
+  @include flexDirection(row);
+  @include justifyContent(space-around);
+
   @media screen and (max-width: $small) {
-    flex-direction: column;
+    @include flexDirection(column);
   }
 
   div {
@@ -208,16 +265,17 @@ body {
   }
 
   div.box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
     margin: 50px auto;
     cursor: default;
 
+    @include flexDisplay();
+    @include flexDirection(row);
+    @include justifyContent(space-around);
+    @include alignItems(flex-start);
+    @include flex-wrap(wrap);
+
     @media screen and (max-width: $small) {
-      flex-direction: column;
+      @include flexDirection(column);
       margin: 10px auto;
     }
 
@@ -263,13 +321,14 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
+
+  @include flexDisplay();
+  @include flexDirection(row);
+  @include justifyContent(center);
+  @include alignItems(stretch);
 
   @media screen and (max-width: $small) {
-    flex-direction: column-reverse;
+    @include flexDirection(column-reverse);
   }
 
   #map {
