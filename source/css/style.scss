@@ -1,0 +1,346 @@
+/* variables */
+$pink       : #CB136D;
+$white      : #FFFFFF;
+$lightGrey  : #EEEEEE;
+$darkGrey   : #424242;
+$black      : #000000;
+$small      : 600px;
+
+* {
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+
+  h1 {
+    font-weight: 400;
+    font-size: 40px;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 30px;
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+}
+
+#header {
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: 0;
+  padding: 120px 0 100px;
+  color: $white;
+  text-align: center;
+
+  h1 {
+    width: 90%;
+    margin: auto;
+  }
+
+  h1 span {
+    border-bottom: 4px solid $white;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+
+  a {
+    display: block;
+    width: 40px;
+    text-decoration: none;
+    color: $white;
+    margin: 80px auto 0;
+    font-size: 30px;
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+
+}
+
+#about {
+  width: 100%;
+  padding: 20px 0 50px;
+  margin: 0;
+  text-align: center;
+  background-color: $lightGrey;
+
+  h1 {
+    color: $pink;
+  }
+
+  p {
+    margin: auto;
+    max-width: 750px;
+    width: 90%;
+  }
+}
+
+#services {
+
+  width: 100%;
+  margin: 0;
+  padding: 20px 0 70px;
+  text-align: center;
+
+  h1, h2 {
+    color: $pink;
+  }
+
+  div.box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    @media screen and (max-width: $small) {
+      flex-direction: column;
+    }
+
+    div {
+      width: 45%;
+      text-align: center;
+      border: 3px solid $pink;
+      padding: 20px 0;
+
+      @media screen and (max-width: $small) {
+        width: 90%;
+        margin: 10px auto;
+      }
+
+      a {
+        display: block;
+        padding: 15px 0;
+        margin: 30px auto;
+        width: 160px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $pink;
+        border: 2px solid $pink;
+        font-weight: 400;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+
+        &:hover {
+          background-color: $pink;
+          color: $white;
+        }
+
+      }
+
+    }
+  }
+
+
+
+}
+
+#numbers {
+  width: 100%;
+  margin: 0;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  background-color: $pink;
+  color: $white;
+
+  @media screen and (max-width: $small) {
+    flex-direction: column;
+  }
+
+  div {
+    width: 25%;
+    max-width: 300px;
+
+    @media screen and (max-width: $small) {
+      width: 90%;
+      margin: auto;
+    }
+
+  }
+
+  span.big {
+    display: block;
+    font-size: 70px;
+  }
+
+  span {
+    font-weight: 100;
+  }
+
+}
+
+#prices {
+  width: 100%;
+  margin: 0;
+  padding: 20px 0 50px;
+  text-align: center;
+  background-color: $lightGrey;
+
+  h1, h2{
+    color: $pink;
+  }
+
+  p {
+    color: $darkGrey;
+    width: 90%;
+    margin: auto;
+  }
+
+  div.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    cursor: default;
+
+    @media screen and (max-width: $small) {
+      flex-direction: column;
+      margin: 10px auto;
+    }
+
+    div {
+      width: 20%;
+      max-width: 300px;
+      border: 3px solid $pink;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      padding-bottom: 10px;
+
+      @media screen and (max-width: $small) {
+        width: 90%;
+        margin: 10px auto;
+      }
+
+      &:hover {
+        background-color: $pink;
+
+        h2, p {
+          color: $white;
+        }
+
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 20px;
+        color: $black;
+
+      }
+
+    }
+
+  }
+
+}
+
+#contact {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+
+  @media screen and (max-width: $small) {
+    flex-direction: column-reverse;
+  }
+
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+
+  .right {
+
+    @media screen and (max-width: $small) {
+      padding-bottom: 20px;
+    }
+
+    h1 {
+      color: $pink;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    a {
+      display: block;
+      padding: 15px 0;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 300px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $pink;
+      border: 2px solid $pink;
+      font-weight: 400;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+
+      &:hover {
+        background-color: $pink;
+        color: $white;
+      }
+    }
+
+    p {
+      width: 90%;
+      max-width: 420px;
+      margin: auto;
+    }
+  }
+
+  .box {
+    width: 50%;
+    text-align: center;
+
+    @media screen and (max-width: $small) {
+      width: 100%;
+    }
+
+  }
+}
+
+#copy {
+  width: 100%;
+  margin: 0;
+  padding: 5px 0;
+  background-color: #111111;
+  color: $white;
+  text-align: center;
+  font-size: 15px;
+
+  a {
+    color: $white;
+  }
+
+}
