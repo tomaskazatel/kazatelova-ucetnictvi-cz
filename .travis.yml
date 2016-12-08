@@ -4,7 +4,7 @@ node_js:
 env:
     global:
         - secure: OnEkO7NdWED03vZJzHjCn8zMPCu1dTm3KBnWWPck2wlJPRKil1DIn4F6iEcLj1SOp3QtZ7Kxqv0Lob7ZAMbBsR7/GQ63eaUoHFB/mMvMY2dsIKHEh0FWngIwZj7pLFOzfb+2Xfnc0p/Mzh2VZg1MzR0fM10jIpMLfmn10h+XB3C+izZNnjXTiz3vDD3vRRSNh+l7nmKzEMDlddmW+l7ujSZFvn/cWduEPXYO+DnCq3gSaDpbKLluhGL8Bds3gNIN9QKVSo73XWFVQwD3wzUuqisDTKfb6F6YNX93vJbQJEx3rME1fKrqNxsJCd/lWaWtJZmp3ZWoYkAHVpX5+gvlFoxrQt09LOE0oz9Lh9PIXT6cMjkxUiz4yHENMyTfRGgTRFkrcWdndsYyPjSdESqV2lvK0XSzLIbFzbVg/cUNYWYfJTQPdC/8pCyiKOrWTMg0WHwRIXDbWkKNVe3GXaMeEPgMz/By+WnRTqIS7iVHOn1hehBRk+/lMTBpU9mdQ/FLV6Lr7+9Cs4gsFfn6/dcy3peNcwrBd7X65X+pXROVsDcYURy3bWYdggTuLXAx9Q3EVEI7yEu+gg5SwUlOAvbrf3seMaD0FgRc8/jhuyqs37neaVGlbMg+s5437Foknch8WzzpWbAZW15FMpYf5q3KvFKBs0jn7gCIF+gDKc6PpXw=
-        - path: "https://${GH_TOKEN}@github.com/tomaskazatel/kazatelova-ucetnictvi.cz.git
+        - path: "https://${GH_TOKEN}@github.com/tomaskazatel/kazatelova-ucetnictvi.cz.git"
 
 branches:
     only:
