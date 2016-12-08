@@ -6,7 +6,7 @@ node_js:
 env:
    global:
        GH_TOKEN : 
-       REPOSITORY: "https://${GH_TOKEN}@github.com/TomasVotruba/tomasvotruba.cz.git"
+       REPOSITORY: 
     
 branches:
     only:
