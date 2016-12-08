@@ -17,6 +17,10 @@ gulp.task('build', function () {
    gulp.src('./source/**/*.html', {base: 'source'})
        .pipe(gulp.dest('./output'));
 
+   //copy CNAME
+    gulp.src('./source/CNAME')
+        .pipe(gulp.dest('./output'));
+
    //copy images
    gulp.src('./source/**/*.{ico,png,jpeg,jpg,gif}', {base: 'source'})
        .pipe(gulp.dest('./output'));
