@@ -16,7 +16,7 @@ before_script:
     - npm install
     
 script:
-    - gulp
+    - gulp build
     
 after_script:
     - cd output
