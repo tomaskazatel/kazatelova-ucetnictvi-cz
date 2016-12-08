@@ -17,7 +17,11 @@ script:
     - gulp build
 
 after_script:
+    - git config --global user.email "travis@travis-ci.org"
+    - git config --global user.name "Travis"
+
     - cd output
+    
     - git init
     - git add .
     - git commit -m "Regenerated output"
