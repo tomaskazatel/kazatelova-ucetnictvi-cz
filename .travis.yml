@@ -1,0 +1,26 @@
+language: node_js
+
+node_js:
+    - "6"
+    
+env:
+   global:
+       GH_TOKEN : 
+       REPOSITORY: "https://${GH_TOKEN}@github.com/TomasVotruba/tomasvotruba.cz.git"
+    
+branches:
+    only:
+        - master    
+
+before_script:
+    - npm install
+    
+script:
+    - gulp
+    
+after_script:
+    - cd output
+    - git init
+    - git add .
+    - git commit -m "Regenerated output"
+    - git push --force --quiet "${REPOSITORY}" master:gh-pages > /dev/null 2>&1
